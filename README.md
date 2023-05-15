@@ -1,6 +1,5 @@
-<img src="./images/SpringIcon.png" alt="Spring Framework" width='60%' height="30%"/>
-
 # The GoldenPath to Spring Course
+<img src="./images/SpringIcon.png" alt="Spring Framework" width='20%' height="25%"/>
 
 ## Course Module 1: Introduction to Spring Framework
 * Overview
