@@ -1,6 +1,6 @@
 # Overview
 
-Spring Framework is a robust and extensively used Java-based framework for developing enterprise-class applications. It offers an extensive programming and configuration architecture for current Java-based modern applications.
+Spring Framework is a robust and extensively used Java-based framework for developing enterprise-class applications. It offers an extensive programming and configuration architecture for current Java-based modern applications. At its core, is a **_depedency injection container_** that **manages the classes you wrote and their dependencies for you**, hence understanding spring framework serves as the foundation for all other projects is crucial.
 
 The Spring Framework has a number of features and modules that may be used alone or in tandem to build strong and versatile applications. Some of the key features of Spring Framework are:
 
