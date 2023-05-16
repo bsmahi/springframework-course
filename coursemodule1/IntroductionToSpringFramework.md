@@ -4,6 +4,9 @@ Spring Framework is a robust and extensively used Java-based framework for devel
 
 The Spring Framework has a number of features and modules that may be used alone or in tandem to build strong and versatile applications. Some of the key features of Spring Framework are:
 
+
+![Image](../images/Spring-Overview.png "Overview of Spring")
+**Source: Spring Framework Documentation**
 ### 1. Inversion of Control - IoC
 > The Spring Framework provides a lightweight container that manages the creation and lifecycle of Java objects. It allows developers to decouple the components of their application and makes it easy to manage dependencies.
 It entails handing over control of producing and instantiating spring beans to the Spring IOC container, with the developer's only responsibility being to configure the beans in the spring xml file or define in using annotation approach.
