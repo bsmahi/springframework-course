@@ -5,4 +5,4 @@ relative_links:
   collections: true
 include:
   - README.md
-  - ./coursemodule1/IntroductionToSpringFramework.md
+  - ToolsForTheCourse.md
