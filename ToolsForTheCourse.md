@@ -1,6 +1,7 @@
 # Tools & Prerequisites 
 
 #### Maven: https://www.baeldung.com/install-maven-on-windows-linux-mac
+https://maven.apache.org/ide.html
 
 #### Gradle: https://gradle.org/install/
 

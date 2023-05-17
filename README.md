@@ -2,6 +2,9 @@
 
 # The GoldenPath to Spring Course
 
+## Note: 
+> Please prepare local development before going through the course modules' using [Tools & Prerequisites](ToolsForTheCourse.md). 
+
 ## Course Module 1: Introduction to Spring Framework
 * Overview
 * History of Spring Framework
