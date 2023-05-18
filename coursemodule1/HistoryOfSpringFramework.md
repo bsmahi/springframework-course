@@ -1,4 +1,4 @@
-Rod Johnson created the inital edition, which was published in October 2002 along with the release of his book _Expert One-to-One Design and Development_.
+Rod Johnson created the initial edition, which was published in October 2002 along with the release of his book _Expert One-to-One Design and Development_.
 
 # SpringFramework Timeline Info
 
