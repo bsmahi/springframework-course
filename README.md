@@ -12,6 +12,8 @@
 * [Design Philosophy](./coursemodule1/DesignPhilosophy.md)
 * [Architecture and Terminology](./coursemodule1/ArchitectureAndTerminology.md)
 
+## [Local Development Setup in IDE's](LocalDevelopmentSteps.md) 
+
 ## Course Module 2: Spring Core
 * [Introduction to Spring Core](./coursemodule2/IntroductionToSpringCore.md)
 * Dependency Injection (DI)
