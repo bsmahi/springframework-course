@@ -13,7 +13,7 @@
 * [Architecture and Terminology](./coursemodule1/ArchitectureAndTerminology.md)
 
 ## Course Module 2: Spring Core
-* Introduction to Spring Core
+* [Introduction to Spring Core](./coursemodule2/IntroductionToSpringCore.md)
 * Dependency Injection (DI)
 * Inversion of Control (IoC)
 * Bean lifecycle and scopes
