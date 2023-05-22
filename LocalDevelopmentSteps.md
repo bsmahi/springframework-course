@@ -1,3 +1,15 @@
+## Steps for Running Sample Project in Local WorkStation
+- Download the zip from [here](https://github.com/bsmahi/springframework-course/blob/main/learn-spring.zip) or clone the Git repository from [here](https://github.com/bsmahi/springframework-course/tree/6bb42d20b052cddeb4dc5a6a6919e348a6e8fd4e/learn-spring).
+- Unzip the zip file (if you downloaded one)
+- Open Command Prompt and Change directory (cd) to folder containing pom.xml
+- Open either IntelliJ or Eclipse
+  - Follow these [steps](https://github.com/bsmahi/springframework-course/blob/main/LocalDevelopmentSteps.md#1-create-a-spring-boot-project-in-intellij-idea) for IntelliJ
+  - Follow these [steps](https://github.com/bsmahi/springframework-course/blob/main/LocalDevelopmentSteps.md#1-create-a-spring-boot-project-in-intellij-idea) for Eclipse 
+- Choose the Spring Boot Main Application file and run the application
+- You are all Set
+
+# OR
+
 ## Create a Spring Boot Project using Spring Initializr for any Development IDE
 - Setting up a Spring Project using spring initializr http://start.spring.io
   ![Image](./images/CreateSpringBootProject.png "Create Spring Boot")
