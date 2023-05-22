@@ -1,8 +1,10 @@
-![Image](./images/SpringLogo.png "SpringFramework")
+<div align="center">
+<img src="./images/SpringLogo.png" alt="SpringLogo">
+</div>
 
 # The GoldenPath to Spring Course
 
-## Note: 
+## Note:
 > Please prepare local development configuration before going through the course modules' using [Tools & Prerequisites](ToolsForTheCourse.md). 
 
 ## Course Module 1: Introduction to Spring Framework
