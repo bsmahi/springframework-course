@@ -15,17 +15,18 @@ Spring provides various techniques for injecting dependencies:
 
 ## [Local Development Setup in IDE's](../LocalDevelopmentSteps.md)
 
-Next, Let us have a look at how Dependency Injection works in the Spring Framework.
-## 2. Constructor-Based Injection
+#### Next, Let us have a look at how Dependency Injection works in the Spring Framework using various techniques.
+
+## 2. Constructor-Based Injection (Recommended)
 
 Constructor-based injection is one of the dependency injection techniques supported by the Spring framework. In this approach, dependencies are provided to a class through its constructor. Spring's dependency injection container is responsible for instantiating the class and injecting the required dependencies.
 
 Here's an example that demonstrates constructor-based injection in Spring:
 
-## 2.1 Create the dependencyinjection` based folder within the `learn-spring` project and create sub folder `construtorbased`
-> com.springcourse.learnspring.dependencyinjection
+## 2.1 Create the `dependencyinjection` based folder within the `learn-spring` project and create sub folder called `constructorbased`
+> com.springcourse.learnspring.dependencyinjection.constructorbased
 
-And make the following classes to learn about dependency injection.
+And make the following classes to learn about constructor based dependency injection.
 
 Suppose we have two classes, `UserService` and `EmailService`, where `UserService` depends on `EmailService` to send notifications. We want to utilize Dependency Injection to inject the `EmailService` dependency into the `UserService` class.
 
@@ -43,8 +44,6 @@ public class EmailService {
 ```
 Next, we'll define the `UserService` class that has a dependency on `EmailService`:
 
-> As of Spring Framework 4.3, an `@Autowired` annotation on such a constructor is no longer necessary if the target bean defines only one constructor to begin with. However, if several constructors are available and there is no primary/default constructor, at least one of the constructors must be annotated with @Autowired in order to instruct the container which one to use. See the discussion on constructor resolution for details.
-
 ```java
 package com.springcourse.learnspring.dependencyinjection.constructorbased;
 
@@ -52,7 +51,6 @@ public class UserService {
     private final EmailService emailService;
 
     // Constructor Injection
-    @Autowired
     public UserService(EmailService emailService) {
         this.emailService = emailService;
     }
@@ -133,8 +131,10 @@ The above example shows how Dependency Injection works in the Spring Framework v
 
 In Spring, setter-based injection is a type of dependency injection where dependencies are injected into a class using setter methods. This is achieved by annotating the setter methods with appropriate annotations. Here's an example to illustrate setter-based injection in Spring using annotations:
 
-## 3.1 Create the `dependencyinjection` based folder within the `learn-spring` project and create sub folder `setterbased`
-> com.springcourse.learnspring.dependencyinjection
+Here are the steps to get the `setter-based injection` working.
+
+## 3.1 Create sub folder called `setterbased` inside `dependencyinjection` folder
+> com.springcourse.learnspring.dependencyinjection.setterbased
 
 Suppose we have two classes, `UserService` and `EmailService`, where `UserService` depends on `EmailService` to send notifications. We want to utilize Dependency Injection to inject the `EmailService` dependency into the `UserService` class.
 
@@ -238,3 +238,28 @@ Email sent: Hello, Steve Jobs - SetterBased! You have a new notification.
 ```
 
 The above example shows how Dependency Injection works in the Spring Framework via `setter injection`.
+
+## 4. Field Injection
+
+Field injection is a type of dependency injection in the Spring framework in which dependencies are injected directly into class fields. This method lets you annotate the fields with the `@Autowired` annotation to tell Spring to wire the dependencies for you. Here's an example of Spring field injection:
+
+For UserService we will use field injection by annotating with `@Autowired`
+
+```java
+package com.springcourse.learnspring.dependencyinjection.constructorbased;
+
+public class UserService {
+    
+    @Autowired
+    private EmailService emailService;
+
+    public void notifyUser(String username) {
+        String message = "Hello, " + username + "! You have a new notification.";
+        emailService.sendEmail(message);
+    }
+}
+```
+In the example above, the `UserService` class has a field named emailService that is annotated with `@Autowired`. This annotation tells Spring to inject an instance of `EmailService` into that field.
+
+## Note
+> As of Spring Framework 4.3, an `@Autowired` annotation on such a constructor is no longer necessary if the target bean defines only one constructor to begin with. However, if several constructors are available and there is no primary/default constructor, at least one of the constructors must be annotated with @Autowired in order to instruct the container which one to use. See the discussion on constructor resolution for details.
