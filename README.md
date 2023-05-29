@@ -18,6 +18,7 @@
 
 ## Course Module 2: Spring Core
 * [Introduction to Spring Core](./coursemodule2/IntroductionToSpringCore.md)
+* [List of Annotations Used](./ListOfAnnotations.md)
 * [Dependency Injection (DI)](./coursemodule2/DependencyInjection.md)
 * [Inversion of Control (IoC)](./coursemodule2/InversionOfControl.md)
 * Bean lifecycle and scopes
