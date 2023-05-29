@@ -243,7 +243,23 @@ The above example shows how Dependency Injection works in the Spring Framework v
 
 Field injection is a type of dependency injection in the Spring framework in which dependencies are injected directly into class fields. This method lets you annotate the fields with the `@Autowired` annotation to tell Spring to wire the dependencies for you. Here's an example of Spring field injection:
 
-For UserService we will use field injection by annotating with `@Autowired`
+In constructor based injection package, replace the following in `UserService` with, we will use field injection by annotating with `@Autowired`.
+
+Similar to Constructor-based Dependency Injection, here the Autowiring takes place by means of field `emailService`  The bean object created for EmailService class will be Autowired & injected via the field, ‘emailService’ in UserService class.
+
+```java
+    // Constructor Injection
+    public UserService(EmailService emailService) {
+        this.emailService = emailService;
+    }
+    
+```
+For `Field Injection`, replace the above code with the following.
+
+```java
+    @Autowired
+    private EmailService emailService;
+```
 
 ```java
 package com.springcourse.learnspring.dependencyinjection.constructorbased;
@@ -263,3 +279,56 @@ In the example above, the `UserService` class has a field named emailService tha
 
 ## Note
 > As of Spring Framework 4.3, an `@Autowired` annotation on such a constructor is no longer necessary if the target bean defines only one constructor to begin with. However, if several constructors are available and there is no primary/default constructor, at least one of the constructors must be annotated with @Autowired in order to instruct the container which one to use. See the discussion on constructor resolution for details.
+
+## 5. Method Injection
+
+In Spring Framework, method injection can also be achieved using annotations. The @Autowired annotation is commonly used for method injection. Here's an example of method injection using annotations:
+
+Similar to Setter-based Dependency Injection, here the Autowiring takes place by means of field `emailService`  The bean object created for EmailService class will be Autowired & injected via the field, ‘emailService’ in UserService class.
+
+
+```java
+package com.springcourse.learnspring.dependencyinjection.setterbased;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class UserService {
+    private EmailService emailService;
+
+    // Method Injection
+    @Autowired
+    public void setEmailService(EmailService emailService) {
+        this.emailService = emailService;
+    }
+
+    public void notifyUser(String username) {
+        String message = "Hello, " + username + "! You have a new notification.";
+        emailService.sendEmail(message);
+    }
+}
+```
+## Advantages of Dependency Injection
+
+Dependency Injection (DI) in the Spring Framework provides various benefits that contribute to application flexibility, maintainability, and testability. Here are some main benefits of Spring Framework Dependency Injection:
+
+1. Loose Coupling
+2. Easy Component Integration
+3. Testability
+4. Configurability
+5. Single Responsibility Principle (SRP)
+6. Runtime Flexibility
+7. Centralized Dependency Management
+8. Encourages Best Practices
+
+## Disadvantages of Dependency Injection
+
+1. Increased Complexity
+2. Runtime Errors
+3. Performance Overhead
+4. Increased Complexity of Testing
+5. Configuration Management
+6. Dependency Explosion
+7. Tight Coupling with the Framework
+8. Steeper Learning Curve
+
+Despite these possible drawbacks, Dependency Injection is still frequently used and offers considerable advantages in terms of `modularity, maintainability, and testability`. Before selecting to utilise DI in any particular circumstance, it is critical to thoroughly assess the advantages and downsides and analyse the project's individual requirements.

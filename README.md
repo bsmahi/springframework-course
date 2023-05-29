@@ -18,8 +18,8 @@
 
 ## Course Module 2: Spring Core
 * [Introduction to Spring Core](./coursemodule2/IntroductionToSpringCore.md)
-* Dependency Injection (DI)
-* Inversion of Control (IoC)
+* [Dependency Injection (DI)](./coursemodule2/DependencyInjection.md)
+* [Inversion of Control (IoC)](./coursemodule2/InversionOfControl.md)
 * Bean lifecycle and scopes
 * Using annotations for configuration
 * Using XML for configuration
