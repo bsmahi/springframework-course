@@ -19,7 +19,7 @@ Annotations can be handled at compile time by annotation processors, which might
 
 Annotations have become an essential aspect of Java programming, allowing frameworks such as `Spring`, `Hibernate`, and `JUnit` to provide strong capabilities and ease application settings. They let you express information and declarative behaviours directly in your code, hence increasing readability and maintainability.
 
-For more information [click here](https://www.jitendrazaa.com/blog/java/meta-annotation-annotate-other-annotation/)
+For more information [click here](https://www.jitendrazaa.com/blog/java/meta-annotation-annotate-other-annotation/){:target="_blank"}
 
 ## List of Annotations used in Spring Framework & Spring Boot
 
