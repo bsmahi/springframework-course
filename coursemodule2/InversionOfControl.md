@@ -71,7 +71,7 @@ public class InversionOfControlApp {
         // Access the UserService bean and perform operations
         UserService userService = context.getBean(UserService.class);
 
-        User user = new User("John Doe");
+        User user = new User("Steve Jobs");
         userService.createUser(user);
     }
 }
