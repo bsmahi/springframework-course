@@ -2,6 +2,12 @@
 
 `Inversion of Control (IoC)` is a core principle of the Spring Framework. It refers to the concept where _**the control of object creation and lifecycle management is shifted from the application code to a container or framework**_. The Spring container takes responsibility for `instantiating, configuring, and managing objects (beans) based on their definitions and dependencies`.
 
+<div align="center">
+<img src="../images/InversionOfControl.png" alt="SpringLogo">
+</div>
+
+**_Source: Spring Framework Documentation_**
+
 Here's an example to illustrate IoC in the Spring Framework:
 
 Consider a basic application with two classes, **UserService** and **UserRepository**, where **UserService** is dependent on **UserRepository**. Spring annotations will be used to configure the IoC container and handle dependencies.
