@@ -21,9 +21,7 @@
 * [List of Annotations Used](./ListOfAnnotations.md)
 * [Dependency Injection (DI)](./coursemodule2/DependencyInjection.md)
 * [Inversion of Control (IoC)](./coursemodule2/InversionOfControl.md)
-* Bean lifecycle and scopes
-* Using annotations for configuration
-* Using XML for configuration
+* [Bean lifecycle and scopes](./coursemodule2/BeanLifeCycleAndScopes.md)
 
 ## Course Module 3: Spring MVC
 * Introduction to Spring MVC
