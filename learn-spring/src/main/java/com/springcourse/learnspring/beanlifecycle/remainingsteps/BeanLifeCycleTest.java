@@ -2,7 +2,7 @@ package com.springcourse.learnspring.beanlifecycle.remainingsteps;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class BeanPostProcessorTest {
+public class BeanLifeCycleTest {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 
