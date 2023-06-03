@@ -17,7 +17,7 @@ Let's create a class that implements BeanNameAware interface, as shown below.
 
 ### Step 2: Create BeanNameAwareInterfaceExample class by implementing `BeanNameAware`
 ```java
-package com.springcourse.learnspring.beanlifecycle.beannameaware;
+package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
 
 import org.springframework.beans.factory.BeanNameAware;
 
@@ -37,7 +37,7 @@ The _name_ parameter represents the Spring container's registered bean id. In ou
 ### Step 3: Let's now add a bean of this type to a Spring configuration class
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.beannameaware;
+package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -57,7 +57,7 @@ With the `@Bean(name = "myBeanNameAware")` line, we've explicitly assigned named
 ### Step 4: We can now launch the application context by running `BeanNameAwareUsingConfigTest` and retrieve the bean from it
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.beannameaware;
+package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -106,7 +106,7 @@ Bean name : myBeanNameAware --> (2)
         http://www.springframework.org/schema/context
   		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-    <bean id="beanNameAwareInterfaceExample" class="com.springcourse.learnspring.beanlifecycle.beannameaware.BeanNameAwareInterfaceExample" />
+    <bean id="beanNameAwareInterfaceExample" class="com.springcourse.learnspring.beanlifecycle.steps.beannameaware.BeanNameAwareInterfaceExample" />
 
 </beans>
 
@@ -115,7 +115,7 @@ Bean name : myBeanNameAware --> (2)
 ### Step 4: We can now launch the classpath application context by running `BeanNameAwareUsingXmlTest` and retrieve the bean from it
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.beannameaware;
+package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -131,8 +131,8 @@ public class BeanNameAwareUsingXmlTest {
 }
 ```
 
-1. Read beans.xml file from classpath where file is available
-2. Get the bean name `beanNameAwareInterfaceExample` defined in `beans.xml`
+1. Read the `beans.xml` file from classpath where file is available
+2. Get the bean name `beanNameAwareInterfaceExample` defined in the `beans.xml`
 3. Closing the application context
 
 ```log
@@ -155,7 +155,7 @@ Let's understand this concept through examples
 ### Step 1: Let us write an AlbumService class which implements above interfaces
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.remainingsteps;
+package com.springcourse.learnspring.beanlifecycle.steps;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
@@ -197,7 +197,7 @@ public class AlbumService implements InitializingBean, DisposableBean {
 ## Step 2: Create a class called `Album`
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.remainingsteps;
+package com.springcourse.learnspring.beanlifecycle.steps;
 
 public class Album {
 
@@ -216,11 +216,11 @@ public class Album {
 ## Step 3: Modify existing `beans.xml` file by adding the following entry
 
 ```xml
-<bean id="album" class="com.springcourse.learnspring.beanlifecycle.remainingsteps.Album">
+<bean id="album" class="com.springcourse.learnspring.beanlifecycle.steps.Album">
     <property name="albumName" value="Paradise Lost"/>
 </bean>
 
-<bean id="albumService" class="com.springcourse.learnspring.beanlifecycle.remainingsteps.AlbumService">
+<bean id="albumService" class="com.springcourse.learnspring.beanlifecycle.steps.AlbumService">
  <property name="album" ref="album"/>
 </bean>
 ```
@@ -228,7 +228,7 @@ public class Album {
 ## Step 4: Create the BeanLifeCycleTest class as below for verifying 
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.remainingsteps;
+package com.springcourse.learnspring.beanlifecycle.steps;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

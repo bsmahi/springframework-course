@@ -1,4 +1,4 @@
-package com.springcourse.learnspring.beanlifecycle.remainingsteps;
+package com.springcourse.learnspring.beanlifecycle.steps;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;

@@ -13,16 +13,16 @@
     -->
     <context:annotation-config/>
 
-    <bean id="album" class="com.springcourse.learnspring.beanlifecycle.remainingsteps.Album">
+    <bean id="album" class="com.springcourse.learnspring.beanlifecycle.steps.Album">
         <property name="albumName" value="Paradise Lost"/>
     </bean>
 
     <!-- This post processor methods are called for every bean -->
-    <bean class="com.springcourse.learnspring.beanlifecycle.remainingsteps.MyBeanPostProcessor"/>
+    <bean class="com.springcourse.learnspring.beanlifecycle.steps.MyBeanPostProcessor"/>
 
-    <bean id="beanNameAwareInterfaceExample" class="com.springcourse.learnspring.beanlifecycle.beannameaware.BeanNameAwareInterfaceExample" />
+    <bean id="beanNameAwareInterfaceExample" class="com.springcourse.learnspring.beanlifecycle.steps.beannameaware.BeanNameAwareInterfaceExample" />
 
-    <bean id="albumService" class="com.springcourse.learnspring.beanlifecycle.remainingsteps.AlbumService">
+    <bean id="albumService" class="com.springcourse.learnspring.beanlifecycle.steps.AlbumService">
         <property name="album" ref="album"/>
     </bean>
 

@@ -1,4 +1,4 @@
-package com.springcourse.learnspring.beanlifecycle.remainingsteps;
+package com.springcourse.learnspring.beanlifecycle.steps;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;

@@ -1,4 +1,4 @@
-package com.springcourse.learnspring.beanlifecycle.beannameaware;
+package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
 
 import org.springframework.beans.factory.BeanNameAware;
 
