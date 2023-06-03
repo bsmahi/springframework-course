@@ -92,7 +92,7 @@ So, using **ApplicationContext**, we obtained the **Student** bean from the cont
 
 </beans>
 ```
-## Step 4: Create an ApplicationContextAwareTest class to validate the output.
+## Step 4: Create an ApplicationContextAwareTest class to validate the output
 
 ```java
 package com.springcourse.learnspring.springawareinterfaces;
@@ -131,3 +131,87 @@ As we can see from the result.
 1. The container sets the **ApplicationContext** first, as we have built **ApplicationContextAware**.
 2. The **bean value is then retrieved** from the application context, i.e., getting student details.
 3. The **scope** of the bean is then checked using application context. 
+
+Let's now understand BeanFactoryAware with an example
+
+## Step 5: Create a class that implements `BeanFactoryAware` as shown below
+
+```java
+package com.springcourse.learnspring.springawareinterfaces;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryAware;
+
+public class BeanFactoryAwareImpl implements BeanFactoryAware {
+
+    private BeanFactory beanFactory;
+
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        System.out.println("setBeanFactory method called");
+        this.beanFactory = beanFactory;
+    }
+
+    public void getStudentDetails() {
+        Student student = (Student) beanFactory.getBean("student");
+        System.out.println("StudentName.." + student.getName());
+
+        System.out.println(beanFactory.isSingleton("student"));
+    }
+}
+```
+## Step 6: Now create the `beanfactoryaware-bean.xml` file
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+
+    <bean id="beanFactoryAware" class="com.springcourse.learnspring.springawareinterfaces.BeanFactoryAwareImpl"/>
+
+    <bean id="student" class="com.springcourse.learnspring.springawareinterfaces.Student">
+        <property name="name" value="Steve"/>
+    </bean>
+
+</beans>
+```
+
+## Step 7: Create an BeanFactoryAwareTest class to validate the output
+
+```java
+package com.springcourse.learnspring.springawareinterfaces;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class BeanFactoryAwareTest {
+    public static void main(String[] args) {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("beanfactoryaware-bean.xml");
+
+        BeanFactoryAwareImpl beanFactoryAwareImpl = (BeanFactoryAwareImpl) applicationContext.getBean("beanFactoryAware");
+
+        System.out.println("Bean factory aware output");
+        beanFactoryAwareImpl.getStudentDetails();
+        applicationContext.registerShutdownHook();
+    }
+}
+```
+Run the preceding class to view the output shown below.
+
+```log
+13:15:21.675 [main] DEBUG org.springframework.context.support.ClassPathXmlApplicationContext -- Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@ea4a92b
+13:15:21.983 [main] DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader -- Loaded 2 bean definitions from class path resource [beanfactoryaware-bean.xml]
+13:15:22.043 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'beanFactoryAware'
+setBeanFactory method called
+13:15:22.065 [main] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory -- Creating shared instance of singleton bean 'student'
+Bean factory aware output
+StudentName..Steve
+true
+13:15:22.188 [SpringContextShutdownHook] DEBUG org.springframework.context.support.ClassPathXmlApplicationContext -- Closing org.springframework.context.support.ClassPathXmlApplicationContext@ea4a92b, started on Sat Jun 03 13:15:21 IST 2023
+```
+As we can see from the result.
+1. The container sets the **BeanFactory** first, as we have built **BeanFactoryAware**.
+2. The **bean value is then retrieved** from the Bean Factory, i.e., getting student details.
+3. The **scope** of the bean is then checked using Bean Factory. 
