@@ -9,11 +9,11 @@
 
     <context:annotation-config/>
 
-    <bean id="employee" class="com.springcourse.learnspring.beanlifecycle.scopes.Employee">
+    <bean id="employee" class="com.springcourse.learnspring.springcore.beanlifecycle.scopes.Employee">
         <property name="name" value="Steve"/>
     </bean>
 
-    <bean id="employeeprototype" class="com.springcourse.learnspring.beanlifecycle.scopes.Employee" scope="prototype">
+    <bean id="employeeprototype" class="com.springcourse.learnspring.springcore.beanlifecycle.scopes.Employee" scope="prototype">
         <property name="name" value="David"/>
     </bean>
 </beans>

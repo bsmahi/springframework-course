@@ -10,12 +10,12 @@
 
     <context:annotation-config/>
 
-    <bean id="employee" class="com.springcourse.learnspring.beanlifecycle.steps.Employee">
+    <bean id="employee" class="com.springcourse.learnspring.springcore.beanlifecycle.steps.Employee">
         <property name="employeeName" value="Steve"/>
     </bean>
 
 
-    <bean id="employeeService" class="com.springcourse.learnspring.beanlifecycle.steps.EmployeeService">
+    <bean id="employeeService" class="com.springcourse.learnspring.springcore.beanlifecycle.steps.EmployeeService">
         <property name="employee" ref="employee"/>
     </bean>
 </beans>

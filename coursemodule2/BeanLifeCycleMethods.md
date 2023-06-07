@@ -17,7 +17,7 @@ Let's create a class that implements BeanNameAware interface, as shown below.
 
 ### Step 2: Create BeanNameAwareInterfaceExample class by implementing `BeanNameAware`
 ```java
-package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
+package com.springcourse.learnspring.springcore.beanlifecycle.steps.beannameaware;
 
 import org.springframework.beans.factory.BeanNameAware;
 
@@ -37,7 +37,7 @@ The _name_ parameter represents the Spring container's registered bean id. In ou
 ### Step 3: Let's now add a bean of this type to a Spring configuration class
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
+package com.springcourse.learnspring.springcore.beanlifecycle.steps.beannameaware;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -57,7 +57,7 @@ With the `@Bean(name = "myBeanNameAware")` line, we've explicitly assigned named
 ### Step 4: We can now launch the application context by running `BeanNameAwareUsingConfigTest` and retrieve the bean from it
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
+package com.springcourse.learnspring.springcore.beanlifecycle.steps.beannameaware;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -106,7 +106,7 @@ Bean name : myBeanNameAware --> (2)
         http://www.springframework.org/schema/context
   		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-    <bean id="beanNameAwareInterfaceExample" class="com.springcourse.learnspring.beanlifecycle.steps.beannameaware.BeanNameAwareInterfaceExample" />
+    <bean id="beanNameAwareInterfaceExample" class="com.springcourse.learnspring.springcore.beanlifecycle.steps.beannameaware.BeanNameAwareInterfaceExample" />
 
 </beans>
 
@@ -115,7 +115,7 @@ Bean name : myBeanNameAware --> (2)
 ### Step 4: We can now launch the classpath application context by running `BeanNameAwareUsingXmlTest` and retrieve the bean from it
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.steps.beannameaware;
+package com.springcourse.learnspring.springcore.beanlifecycle.steps.beannameaware;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

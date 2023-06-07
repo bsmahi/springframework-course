@@ -28,7 +28,7 @@ Let's understand **ApplicationContextAware** and **BeanFactoryAware** with an ex
 ## Step 1: First Create Student POJO class.
 
 ```java
-package com.springcourse.learnspring.springawareinterfaces;
+package com.springcourse.learnspring.springcore.springawareinterfaces;
 
 public class Student {
 
@@ -47,7 +47,7 @@ public class Student {
 ## Step 2: Create the following class that implements ApplicationContextAware
 
 ```java
-package com.springcourse.learnspring.springawareinterfaces;
+package com.springcourse.learnspring.springcore.springawareinterfaces;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -84,9 +84,9 @@ So, using **ApplicationContext**, we obtained the **Student** bean from the cont
        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
     
     <bean id="applicationContextAware"
-          class="com.springcourse.learnspring.springawareinterfaces.ApplicationContextAwareImpl"/>
+          class="com.springcourse.learnspring.springcore.springawareinterfaces.ApplicationContextAwareImpl"/>
 
-    <bean id="student" class="com.springcourse.learnspring.springawareinterfaces.Student">
+    <bean id="student" class="com.springcourse.learnspring.springcore.springawareinterfaces.Student">
         <property name="name" value="Steve"/>
     </bean>
 
@@ -95,7 +95,7 @@ So, using **ApplicationContext**, we obtained the **Student** bean from the cont
 ## Step 4: Create an ApplicationContextAwareTest class to validate the output
 
 ```java
-package com.springcourse.learnspring.springawareinterfaces;
+package com.springcourse.learnspring.springcore.springawareinterfaces;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -137,7 +137,7 @@ Let's now understand BeanFactoryAware with an example
 ## Step 5: Create a class that implements `BeanFactoryAware` as shown below
 
 ```java
-package com.springcourse.learnspring.springawareinterfaces;
+package com.springcourse.learnspring.springcore.springawareinterfaces;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
@@ -170,9 +170,9 @@ public class BeanFactoryAwareImpl implements BeanFactoryAware {
        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
 
-    <bean id="beanFactoryAware" class="com.springcourse.learnspring.springawareinterfaces.BeanFactoryAwareImpl"/>
+    <bean id="beanFactoryAware" class="com.springcourse.learnspring.springcore.springawareinterfaces.BeanFactoryAwareImpl"/>
 
-    <bean id="student" class="com.springcourse.learnspring.springawareinterfaces.Student">
+    <bean id="student" class="com.springcourse.learnspring.springcore.springawareinterfaces.Student">
         <property name="name" value="Steve"/>
     </bean>
 
@@ -182,7 +182,7 @@ public class BeanFactoryAwareImpl implements BeanFactoryAware {
 ## Step 7: Create an BeanFactoryAwareTest class to validate the output
 
 ```java
-package com.springcourse.learnspring.springawareinterfaces;
+package com.springcourse.learnspring.springcore.springawareinterfaces;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

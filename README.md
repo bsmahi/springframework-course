@@ -24,9 +24,9 @@
 * [Bean lifecycle and scopes](./coursemodule2/BeanLifeCycleAndScopes.md)
 
 ## Course Module 3: Spring MVC
-* Introduction to Spring MVC
-* Overview of the Model-View-Controller (MVC) pattern
-* Configuration of Spring MVC
+* [Introduction to Spring MVC](./coursemodule3/IntroductionToSpringMVC.md)
+* [Spring MVC Terminology](./coursemodule3/SpringMVCTerminology.md)
+* [Configuration of Spring MVC](./coursemodule3/ConfigureSpringMVC.md)
 * Controllers and handling requests
 * Views and rendering responses (JSP or Thymeleaf)
 * Form handling and validation

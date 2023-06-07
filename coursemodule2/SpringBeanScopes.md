@@ -16,10 +16,10 @@ Spring offers 5 scopes for a bean by default; however, we may customize and buil
 
 Now consider the Singleton bean as an example.
 
-## Step 1: Create a class called `Employee` as below under the package **com.springcourse.learnspring.beanlifecycle.scopes**
+## Step 1: Create a class called `Employee` as below under the package **com.springcourse.learnspring.springcore.beanlifecycle.scopes**
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.scopes;
+package com.springcourse.learnspring.springcore.beanlifecycle.scopes;
 
 public class Employee {
     private String name;
@@ -48,7 +48,7 @@ Spring Configuration File Name is: **beans-scope.xml**
 
     <context:annotation-config/>
 
-    <bean id="employee" class="com.springcourse.learnspring.beanlifecycle.scopes.Employee">
+    <bean id="employee" class="com.springcourse.learnspring.springcore.beanlifecycle.scopes.Employee">
         <property name="name" value="Steve"/>
     </bean>
 </beans>
@@ -59,7 +59,7 @@ In The preceding spring configuration file, we have not declared any scope for t
 ## Step 3: Let's execute file to check the bean's scope by creating `SingletonBeanScopeTest`
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.scopes;
+package com.springcourse.learnspring.springcore.beanlifecycle.scopes;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -108,7 +108,7 @@ true
 Let's create another bean id `employeeprototype` by defining **scope="prototype"**
 
 ```xml
-<bean id="employeeprototype" class="com.springcourse.learnspring.beanlifecycle.scopes.Employee" scope="prototype">
+<bean id="employeeprototype" class="com.springcourse.learnspring.springcore.beanlifecycle.scopes.Employee" scope="prototype">
         <property name="name" value="David"/>
 </bean>
 ```
@@ -116,7 +116,7 @@ Let's create another bean id `employeeprototype` by defining **scope="prototype"
 ## Step 5: Let's execute file to check the bean's scope by creating `ProtoTypeScopeTest`
 
 ```java
-package com.springcourse.learnspring.beanlifecycle.scopes;
+package com.springcourse.learnspring.springcore.beanlifecycle.scopes;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

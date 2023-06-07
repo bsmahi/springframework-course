@@ -2,7 +2,7 @@
 <img src="../images/SpringMVCLogo.png" alt="SpringMVC">
 </div>
 
-# Spring MVC Terminology
+# Terminology for Spring MVC
 
 Here's an overview of the key concepts in Spring MVC:
 

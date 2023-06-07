@@ -24,16 +24,16 @@ Constructor-based injection is one of the dependency injection techniques suppor
 Here's an example that demonstrates constructor-based injection in Spring:
 
 ## 2.1 Create the `dependencyinjection` based folder within the `learn-spring` project and create sub folder called `constructorbased`
-> com.springcourse.learnspring.dependencyinjection.constructorbased
+> com.springcourse.learnspring.springcore.dependencyinjection.constructorbased
 
-And make the following classes to learn about constructor based dependency injection.
+And make the following classes to learn about constructor-based dependency injection.
 
 Suppose we have two classes, `UserService` and `EmailService`, where `UserService` depends on `EmailService` to send notifications. We want to utilize Dependency Injection to inject the `EmailService` dependency into the `UserService` class.
 
 First, let's define the `EmailService` class:
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.constructorbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.constructorbased;
 
 public class EmailService {
     public void sendEmail(String message) {
@@ -45,7 +45,7 @@ public class EmailService {
 Next, we'll define the `UserService` class that has a dependency on `EmailService`:
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.constructorbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.constructorbased;
 
 public class UserService {
     private final EmailService emailService;
@@ -67,7 +67,7 @@ In the `UserService` class, we use constructor injection to inject the `EmailSer
 Now, let's see how we configure and utilize Dependency Injection using the Spring Framework:
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.constructorbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.constructorbased;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -93,7 +93,7 @@ In the configuration class (`AppConfig`), we use the `@Configuration` annotation
 To utilize Dependency Injection, we can create an instance of the `ApplicationContext` and retrieve the `UserService` bean from it:
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.constructorbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.constructorbased;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -134,14 +134,14 @@ In Spring, setter-based injection is a type of dependency injection where depend
 Here are the steps to get the `setter-based injection` working.
 
 ## 3.1 Create sub folder called `setterbased` inside `dependencyinjection` folder
-> com.springcourse.learnspring.dependencyinjection.setterbased
+> com.springcourse.learnspring.springcore.dependencyinjection.setterbased
 
 Suppose we have two classes, `UserService` and `EmailService`, where `UserService` depends on `EmailService` to send notifications. We want to utilize Dependency Injection to inject the `EmailService` dependency into the `UserService` class.
 
 First, let's define the `EmailService` class:
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.setterbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.setterbased;
 
 public class EmailService {
     public void sendEmail(String message) {
@@ -153,7 +153,7 @@ public class EmailService {
 Next, we'll define the `UserService` class that has a dependency on `EmailService`:
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.setterbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.setterbased;
 
 public class UserService {
     private EmailService emailService;
@@ -173,7 +173,7 @@ public class UserService {
 Now, let's see how we configure and utilize Dependency Injection using the Spring Framework:
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.setterbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.setterbased;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -182,7 +182,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public com.springcourse.learnspring.dependencyinjection.setterbased.UserService userService() {
+    public com.springcourse.learnspring.springcore.dependencyinjection.setterbased.UserService userService() {
         UserService service = new UserService();
         // Setter Injection
         service.setEmailService(emailService());
@@ -191,7 +191,7 @@ public class AppConfig {
     }
 
     @Bean
-    public com.springcourse.learnspring.dependencyinjection.setterbased.EmailService emailService() {
+    public com.springcourse.learnspring.springcore.dependencyinjection.setterbased.EmailService emailService() {
         return new EmailService();
     }
 }
@@ -204,7 +204,7 @@ In the configuration class (`AppConfig`), we use the `@Configuration` annotation
 To utilize Dependency Injection, we can create an instance of the `ApplicationContext` and retrieve the `UserService` bean from it:
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.setterbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.setterbased;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -262,7 +262,7 @@ For `Field Injection`, replace the above code with the following.
 ```
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.constructorbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.constructorbased;
 
 public class UserService {
     
@@ -288,7 +288,7 @@ Similar to Setter-based Dependency Injection, here the Autowiring takes place by
 
 
 ```java
-package com.springcourse.learnspring.dependencyinjection.setterbased;
+package com.springcourse.learnspring.springcore.dependencyinjection.setterbased;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

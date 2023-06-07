@@ -5,9 +5,9 @@
        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
 
-    <bean id="beanFactoryAware" class="com.springcourse.learnspring.springawareinterfaces.BeanFactoryAwareImpl"/>
+    <bean id="beanFactoryAware" class="com.springcourse.learnspring.springcore.springawareinterfaces.BeanFactoryAwareImpl"/>
 
-    <bean id="student" class="com.springcourse.learnspring.springawareinterfaces.Student">
+    <bean id="student" class="com.springcourse.learnspring.springcore.springawareinterfaces.Student">
         <property name="name" value="Steve"/>
     </bean>
 

@@ -15,7 +15,7 @@ Consider a basic application with two classes, **UserService** and **UserReposit
 ## Step 1: Define the UserRepository class
 
 ```java
-package com.springcourse.learnspring.ioc;
+package com.springcourse.learnspring.springcore.ioc;
 
 @Repository
 public class UserRepository {
@@ -28,7 +28,7 @@ public class UserRepository {
 ## Step 2: Define the `UserService` class and inject the `UserRepository` dependency
 
 ```java
-package com.springcourse.learnspring.ioc;
+package com.springcourse.learnspring.springcore.ioc;
 
 @Service
 public class UserService {
@@ -49,10 +49,10 @@ public class UserService {
 ## Step 3: Configure the Spring IoC container using annotations
 
 ```java
-package com.springcourse.learnspring.ioc;
+package com.springcourse.learnspring.springcore.ioc;
 
 @Configuration
-@ComponentScan(basePackages = "com.springcourse.learnspring.ioc")
+@ComponentScan(basePackages = "com.springcourse.learnspring.springcore.ioc")
 public class AppConfig {
     // Configuration details
 }
@@ -62,7 +62,7 @@ public class AppConfig {
 ## Step 4: Create a main class to bootstrap the Spring container:
 
 ```java
-package com.springcourse.learnspring.ioc;
+package com.springcourse.learnspring.springcore.ioc;
 
 public class InversionOfControlApp {
     public static void main(String[] args) {
