@@ -85,4 +85,7 @@ public class LearnSpringApplication {
 ## Step 5: Test the Application
 Open your web browser and visit http://localhost:8080 (assuming the application is running on the default port). You should see the `Welcome to Spring MVC!` message displayed on the page.
 
+<img src="../images/SpringMVCHome.png" alt="SpringMVCHome">
+
 That's all! You've used Spring Boot to develop a basic Spring MVC application. In the next steps, we'll add more controllers, views, and business logic as needed.
+
