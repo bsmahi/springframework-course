@@ -1,4 +1,37 @@
 # Create Spring MVC Project
+
+We may construct a Spring MVC project in two methods.
+
+## Manual Configuration:
+   
+If you prefer a more hands-on approach, you can manually construct a Spring MVC project by specifying the essential components and setting up the project structure. 
+Typically, you would begin by creating a new **Maven** or **Gradle** project and adding the appropriate **Spring MVC dependencies**.
+The **Spring DispatcherServlet** would then be configured, **controllers** would be created, **views** (templates or JSPs) defined, and any extra components (e.g., data access, security) would be set up.
+This method allows greater flexibility and control over project settings, but it necessitates a better grasp of Spring MVC's internals. 
+
+Configure a Spring MVC project by following these steps in IntelliJ
+
+1. Open your IntelliJ IDEA and click on a new project.
+2. Choose Maven ArcheType from the left and then check Create from archetype. Search for `org.apache.maven.archetypes.maven-archetype-webapp` and hit the Next button.
+3. Fill the details with your project. For learning purpose, 
+    * Name: **learn-springmvc**
+    * GroupId : **com.springmvc**
+    * ArtifactId: **learn-springmvc**
+4. Click the **Create** Button and Wait for a project to open in IDE
+5. Include the following dependent in your `pom.xml` file's dependencies
+    ```xml
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>6.0.9</version>
+    </dependency>
+    ```
+6. Click on the **Maven** tab on the right and click on the sync button to reload the `pox.xml`.
+7. Create two new folders in the main folder, **java** and **resources**, as seen in the screenshot below. We shall keep all *.java files in java and all static resources in resources.
+8. Create a new class in java directory `com.springmvc.HelloController`, Here **com.springmvc** is the name of the base-package and HelloController is the name of our class.
+ 
+## Using Spring Initializr
+
 Spring MVC autoconfiguration in a Spring Boot application is extremely simple because Spring Boot supports autoconfiguration for Spring MVC. 
 
 To create a Spring MVC application using Spring Boot, follow these steps:
