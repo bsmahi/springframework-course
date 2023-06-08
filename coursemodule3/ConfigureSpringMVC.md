@@ -32,6 +32,7 @@ Configure a Spring MVC project by following these steps in IntelliJ
  
 ## Using Spring Initializr
 
+Spring Initializr is a web-based application that the Spring team provides to construct a pre-configured Spring project structure. It lets you choose the dependencies and technologies to integrate in your project, such as Spring MVC, database drivers, security, and so on. After selecting the required choices, you may download the project structure as a zip file and import it into your favourite integrated development environment (IDE).
 Spring MVC autoconfiguration in a Spring Boot application is extremely simple because Spring Boot supports autoconfiguration for Spring MVC. 
 
 To create a Spring MVC application using Spring Boot, follow these steps:
