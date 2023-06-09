@@ -29,7 +29,10 @@ Configure a Spring MVC project by following these steps in IntelliJ
 6. Click on the **Maven** tab on the right and click on the sync button to reload the `pox.xml`.
 7. Create two new folders in the main folder, **java** and **resources**, as seen in the screenshot below. We shall keep all *.java files in java and all static resources in resources.
 8. Create a new class in java directory `com.springmvc.HelloController`, Here **com.springmvc** is the name of the base-package and HelloController is the name of our class.
- 
+9. Create a new directory called templates inside **WEB-INF** directory (assuming you're using Thymeleaf as the template engine). For this example, let's create a file named `hello.html`.
+10. Create a new file named `web.xml` within the **WEB-INF** directory and update its contents as seen in the screenshot below.
+11. Make a new file named `application-servlet.xml` and edit its contents as seen in the screenshot below.
+
 ## Using Spring Initializr
 
 Spring Initializr is a web-based application that the Spring team provides to construct a pre-configured Spring project structure. It lets you choose the dependencies and technologies to integrate in your project, such as Spring MVC, database drivers, security, and so on. After selecting the required choices, you may download the project structure as a zip file and import it into your favourite integrated development environment (IDE).
