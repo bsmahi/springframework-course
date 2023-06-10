@@ -43,8 +43,78 @@ Configure a Spring MVC project by following these steps in IntelliJ
 6. Create a new class in java directory `com.springmvc.HelloController`, Here **com.springmvc** is the name of the base-package and HelloController is the name of our class.
    <img src="../images/SpringMVC5.png" alt="ControllerScreen">
 7. Create a new directory called jsp inside **WEB-INF** directory (assuming you're using jsp as the template engine). For this example, let's create a file named `hello.jsp`.
-10. Create a new file named `web.xml` within the **WEB-INF** directory and update its contents as seen in the screenshot below.
-11. Make a new file named `helloweb-servlet.xml` and edit its contents as seen in the screenshot below.
+```html
+   <!DOCTYPE html>
+   <html>
+   <head>
+       <title>Spring MVC Demo</title>
+   </head>
+   <body>
+       <h2>${message}</h2>
+   </body>
+   </html>
+```
+8. Create a new file named `web.xml` within the **WEB-INF** directory and update its contents as seen in the screenshot below.
+      ```xml
+      <?xml version="1.0" encoding="UTF-8"?>
+         <web-app xmlns="http://java.sun.com/xml/ns/javaee"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemeLocation="
+                             http://java.sun.com/xml/ns/javaee
+                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+         
+           <display-name>Spring MVC Application</display-name>
+         
+           <!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
+           <servlet>
+             <servlet-name>dispatcher</servlet-name>
+             <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+             <init-param>
+               <param-name>contextConfigLocation</param-name>
+               <param-value>/WEB-INF/helloweb-servlet.xml</param-value>
+             </init-param>
+             <load-on-startup>1</load-on-startup>
+           </servlet>
+         
+           <!-- Step 2: Set up URL mapping for Spring MVC Dispatcher Servlet -->
+           <servlet-mapping>
+             <servlet-name>dispatcher</servlet-name>
+             <url-pattern>/</url-pattern>
+           </servlet-mapping>
+         
+         </web-app>
+      ```
+9. Make a new file named `helloweb-servlet.xml` and edit its contents as seen in the screenshot below.
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+      http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!-- Change the name of the package to your base-package -->
+    <context:component-scan base-package="com.springmvc"/>
+    <mvc:annotation-driven/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".html" />
+    </bean>
+
+</beans>
+```
+
+10. Install the Smart Tomcat plugin
+11. Click on the Add Configuration button and then click on + button. Select Smart Tomcat and click OK
+12. Download the [Apache Tomcat](https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.9/bin/apache-tomcat-10.1.9.zip) and extract the compressed download.
+
 
 ## Using Spring Initializr
 
