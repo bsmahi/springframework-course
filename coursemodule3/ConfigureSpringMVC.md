@@ -11,27 +11,40 @@ This method allows greater flexibility and control over project settings, but it
 
 Configure a Spring MVC project by following these steps in IntelliJ
 
-1. Open your IntelliJ IDEA and click on a new project.
-2. Choose Maven ArcheType from the left and then check Create from archetype. Search for `org.apache.maven.archetypes.maven-archetype-webapp` and hit the Next button.
-3. Fill the details with your project. For learning purpose, 
+1. Open your **IntelliJ IDEA** and click on a new project.
+
+   <img src="../images/SpringMVC1.png" alt="IntelliJMainScreen">
+
+2. Choose Maven ArcheType from the left and then check Create from archetype. Search for `org.apache.maven.archetypes.maven-archetype-webapp` and fill the details with your project and Click the **Create** Button
     * Name: **learn-springmvc**
     * GroupId : **com.springmvc**
     * ArtifactId: **learn-springmvc**
-4. Click the **Create** Button and Wait for a project to open in IDE
-5. Include the following dependent in your `pom.xml` file's dependencies
+
+   <img src="../images/SpringMVC2.png" alt="IntelliJMainScreen">
+
+3. Wait for a project to open in IDE, and Include the following dependent in your `pom.xml` file's dependencies
+
     ```xml
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>6.0.9</version>
     </dependency>
-    ```
-6. Click on the **Maven** tab on the right and click on the sync button to reload the `pox.xml`.
-7. Create two new folders in the main folder, **java** and **resources**, as seen in the screenshot below. We shall keep all *.java files in java and all static resources in resources.
-8. Create a new class in java directory `com.springmvc.HelloController`, Here **com.springmvc** is the name of the base-package and HelloController is the name of our class.
-9. Create a new directory called templates inside **WEB-INF** directory (assuming you're using Thymeleaf as the template engine). For this example, let's create a file named `hello.html`.
+    ```   
+
+   <img src="../images/SpringMVC3.png" alt="POMScreen">
+
+   
+4. Click on the **Maven** tab on the right and click on the sync button to reload the `pox.xml`.
+
+5. Create two new folders in the main folder, **java** and **resources**, as seen in the screenshot below. We shall keep all *.java files in java and all static resources in resources.
+   <img src="../images/SpringMVC4.png" alt="IntelliJMainScreen">
+
+6. Create a new class in java directory `com.springmvc.HelloController`, Here **com.springmvc** is the name of the base-package and HelloController is the name of our class.
+   <img src="../images/SpringMVC5.png" alt="ControllerScreen">
+7. Create a new directory called jsp inside **WEB-INF** directory (assuming you're using jsp as the template engine). For this example, let's create a file named `hello.jsp`.
 10. Create a new file named `web.xml` within the **WEB-INF** directory and update its contents as seen in the screenshot below.
-11. Make a new file named `application-servlet.xml` and edit its contents as seen in the screenshot below.
+11. Make a new file named `helloweb-servlet.xml` and edit its contents as seen in the screenshot below.
 
 ## Using Spring Initializr
 
