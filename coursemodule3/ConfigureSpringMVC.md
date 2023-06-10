@@ -2,7 +2,7 @@
 
 We may construct a Spring MVC project in two methods.
 
-## Manual Configuration:
+## 1. Manual Configuration
 
 If you prefer a more hands-on approach, you can manually construct a Spring MVC project by specifying the essential
 components and setting up the project structure.
@@ -190,7 +190,7 @@ Configure a Spring MVC project by following these steps in IntelliJ
 
  <img src="../images/SpringMVCAppLaunch.png" alt="App Launch">
 
-## Using Spring Initializr
+## 2. Using Spring Initializr
 
 Spring Initializr is a web-based application that the Spring team provides to construct a pre-configured Spring project
 structure. It lets you choose the dependencies and technologies to integrate in your project, such as Spring MVC,
