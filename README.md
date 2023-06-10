@@ -27,28 +27,26 @@
 * [Introduction to Spring MVC](./coursemodule3/IntroductionToSpringMVC.md)
 * [Spring MVC Terminology](./coursemodule3/SpringMVCTerminology.md)
 * [Configuration of Spring MVC](./coursemodule3/ConfigureSpringMVC.md)
-* Controllers and handling requests
-* Views and rendering responses (JSP or Thymeleaf)
 * Form handling and validation
 * File uploads
 
 ## Course Module 4: WebServices
-* REST
-* SOAP
+* [REST](./coursemodule4/RESTArchitecture.md)
+* [SOAP](./coursemodule4/SOAPArchitecture.md)
 
-## Course Module 5: Spring Data
-* Introduction to Spring Data
-* Overview of Data Access Object (DAO) pattern
-* Spring Data JPA
-* Spring Data JDBC
-* Spring Data with different DB (H2, Mysql, and MongoDB)
-
-## Course Module 6: Spring Boot
+## Course Module 5: Spring Boot
 * Introduction to Spring Boot & features
 * Advantages of using Spring Boot
 * Creating and configuring a Spring Boot application
 * Using Spring Boot starters
 * Running and deploying Spring Boot applications
+
+## Course Module 6: Spring Data
+* Introduction to Spring Data
+* Overview of Data Access Object (DAO) pattern
+* Spring Data JPA
+* Spring Data JDBC
+* Spring Data with different DB (H2, Mysql, and MongoDB)
 
 ## Course Module 7: Spring Security
 * Introduction to Spring Security

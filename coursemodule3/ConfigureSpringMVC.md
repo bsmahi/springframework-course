@@ -92,19 +92,39 @@ Configure a Spring MVC project by following these steps in IntelliJ
 6. Create a new class in java directory `com.springmvc.HelloController`, Here **com.springmvc** is the name of the
    base-package and HelloController is the name of our class.
    <img src="../images/SpringMVC5.png" alt="ControllerScreen">
+   ```java
+    package com.springmvc;
+
+    import org.springframework.stereotype.Controller;
+    import org.springframework.ui.ModelMap;
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RequestMethod;
+    
+    @Controller
+    public class HelloController {
+    
+        @RequestMapping(value = "/hello_world", method = RequestMethod.GET)
+        public String helloWorld(ModelMap modelMap) {
+            modelMap.addAttribute("message", "Hello World and Welcome to Spring MVC!");
+            return "hello"; // return the name of the file to be loaded, in this context hello.jsp
+        }
+    }
+
+   ```
 7. Create a new directory called jsp inside **WEB-INF** directory (assuming you're using jsp as the template engine).
    For this example, let's create a file named `hello.jsp`.
 
 ```html
-   <!DOCTYPE html>
-<html>
-<head>
-    <title>Spring MVC Demo</title>
-</head>
-<body>
-<h2>${message}</h2>
-</body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spring MVC Example</title>
+    </head>
+    <body>
+    <h1>${message}</h1>
+    </body>
+    </html>
 ```
 
 8. Create a new file named `web.xml` within the **WEB-INF** directory and update its contents as seen in the screenshot
@@ -189,6 +209,14 @@ Configure a Spring MVC project by following these steps in IntelliJ
 14. Go to the browser and access http://localhost:8080/learn-springmvc/hello_world
 
  <img src="../images/SpringMVCAppLaunch.png" alt="App Launch">
+
+# Things to keep in mind
+* **Controller** is a Java class that has the @Controller special annotation and indicates that the class is a Spring MVC Controller.
+* The **Controller** class, like any other java class, has java methods, however these methods are translated to web requests.
+* The **@RequestMapping** annotations are used to link these functions to HTTP requests.
+* **@RequestMapping** annotation contains the name of the web request such as /hello_world.
+* **@RequestMapping** supports all types of web requests such GET, POST etc.,
+* These methods will just return the name of the view page.
 
 ## 2. Using Spring Initializr
 
