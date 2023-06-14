@@ -35,11 +35,11 @@
 * [SOAP](./coursemodule4/SOAPArchitecture.md)
 
 ## Course Module 5: Spring Boot
-* Introduction to Spring Boot & features
-* Advantages of using Spring Boot
-* Creating and configuring a Spring Boot application
-* Using Spring Boot starters
-* Running and deploying Spring Boot applications
+* [Introduction to Spring Boot & features](./coursemodule5/IntroductionToSpringBoot.md)
+* [Advantages of using Spring Boot](./coursemodule5/AdvantagesOfSpringBoot.md)
+* Building An Application with Spring Boot
+* Building a RESTful Web Service (CRUD Operations)
+
 
 ## Course Module 6: Spring Data
 * Introduction to Spring Data
