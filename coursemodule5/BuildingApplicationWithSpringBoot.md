@@ -114,3 +114,18 @@ public class LearnSpringBootApplication {
 }
 
 ```
+
+Let's discuss the annotations being used here
+
+> **@SpringBootApplication = @Configuration + @EnableAutoConfiguration + @ComponentScan**
+
+* **@Configuration:** This class is identified as a source of bean definitions for the application context
+* **@EnableAutoConfiguration:** Spring Boot is instructed to begin adding beans depending on classpath, other beans, and different property settings. If `spring-webmvc` is in the classpath, for example, this annotation marks the application as a web application and triggers important behaviours such as configuring a **DispatcherServlet**.
+In Spring Web-MVC application, `DispatcherServlet` has to be configured separately in `web.xml`, however, in spring boot application automatically it will happen in behind the scenes.
+* **@ComponentScan:** Spring is instructed to hunt for other components, configurations, and services in the `com.springcourse.learnspringboot` package in order to locate the controllers.
+
+To launch an application, the `main()` function calls Spring Boot's `SpringApplication.run()` method.
+
+> NOTE: Did you note that there wasn't a single XML line? There is also no `web.xml` file. This web application is all Java, and you did not have to deal with any plumbing or infrastructure configuration.
+
+There is also a **CommandLineRunner** method that is designated as a **@Bean** and is executed on startup. It obtains all the beans that were produced by your application or that Spring Boot added automatically. It organises them and prints them.
