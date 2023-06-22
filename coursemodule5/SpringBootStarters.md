@@ -1,0 +1,3 @@
+# Spring Boot Starters
+
+Starters are a collection of useful dependency descriptors that you may use in your application. You receive a one-stop shop for all of the Spring and associated technologies you require, eliminating the need to go through example code and copy-paste a slew of dependency descriptions. Include the spring-boot-starter-web dependency in your project if you want to get started using Spring with Web Application.

@@ -37,6 +37,7 @@
 ## Course Module 5: Spring Boot
 * [Introduction to Spring Boot & features](./coursemodule5/IntroductionToSpringBoot.md)
 * [Advantages of using Spring Boot](./coursemodule5/AdvantagesOfSpringBoot.md)
+* [Spring Boot Starters](./coursemodule5/SpringBootStarters.md)
 * [Building An Application with Spring Boot](./coursemodule5/BuildingApplicationWithSpringBoot.md)
 * Building a RESTful Web Service (CRUD Operations)
 

@@ -103,10 +103,9 @@ public class LearnSpringBootApplication {
             System.out.println("Let's have a look at the beans offered by Spring Boot:");
 
             String[] beanNames = context.getBeanDefinitionNames();
-            Arrays.sort(beanNames);
-            for (String beanName : beanNames) {
-                System.out.println(beanName);
-            }
+            Arrays.stream(beanNames)
+                    .sorted() // Sorting
+                    .forEach(System.out::println); // Displaying all the beans where autoconfiguration has happened
 
         };
     }
@@ -129,3 +128,224 @@ To launch an application, the `main()` function calls Spring Boot's `SpringAppli
 > NOTE: Did you note that there wasn't a single XML line? There is also no `web.xml` file. This web application is all Java, and you did not have to deal with any plumbing or infrastructure configuration.
 
 There is also a **CommandLineRunner** method that is designated as a **@Bean** and is executed on startup. It obtains all the beans that were produced by your application or that Spring Boot added automatically. It organises them and prints them.
+
+## Step4: Run LearnSpringBootApplication Class for verifying Auto Configuration Feature
+
+If you use **Maven**, run the following command in a terminal window (in the complete) directory:
+
+> ./mvnw spring-boot:run
+
+or 
+
+> Right-click on **LearnSpringBootApplication** and Run 
+
+You should see output similar to the following where Spring Boot AutoConfiguration happened for the beans:
+
+```text
+2023-06-22T07:19:12.128+05:30  INFO 3223 --- [           main] c.s.l.LearnSpringBootApplication         : Started LearnSpringBootApplication in 2.091 seconds (process running for 2.547)
+Let's have a look at the beans offered by Spring Boot:
+applicationAvailability
+applicationTaskExecutor
+basicErrorController
+beanNameHandlerMapping
+beanNameViewResolver
+characterEncodingFilter
+commandLineRunner
+conventionErrorViewResolver
+defaultServletHandlerMapping
+defaultViewResolver
+dispatcherServlet
+dispatcherServletRegistration
+error
+errorAttributes
+errorPageCustomizer
+errorPageRegistrarBeanPostProcessor
+flashMapManager
+forceAutoProxyCreatorToUseClassProxying
+formContentFilter
+handlerExceptionResolver
+handlerFunctionAdapter
+helloWorldController
+httpRequestHandlerAdapter
+jacksonObjectMapper
+jacksonObjectMapperBuilder
+jsonComponentModule
+jsonMixinModule
+jsonMixinModuleEntries
+learnSpringBootApplication
+lifecycleProcessor
+localeCharsetMappingsCustomizer
+localeResolver
+mappingJackson2HttpMessageConverter
+messageConverters
+multipartConfigElement
+multipartResolver
+mvcContentNegotiationManager
+mvcConversionService
+mvcHandlerMappingIntrospector
+mvcPathMatcher
+mvcPatternParser
+mvcResourceUrlProvider
+mvcUriComponentsContributor
+mvcUrlPathHelper
+mvcValidator
+mvcViewResolver
+org.springframework.aop.config.internalAutoProxyCreator
+org.springframework.boot.autoconfigure.AutoConfigurationPackages
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration
+org.springframework.boot.autoconfigure.aop.AopAutoConfiguration$ClassProxyingConfiguration
+org.springframework.boot.autoconfigure.availability.ApplicationAvailabilityAutoConfiguration
+org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration
+org.springframework.boot.autoconfigure.context.LifecycleAutoConfiguration
+org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration
+org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration
+org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration$StringHttpMessageConverterConfiguration
+org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration
+org.springframework.boot.autoconfigure.http.JacksonHttpMessageConvertersConfiguration$MappingJackson2HttpMessageConverterConfiguration
+org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration
+org.springframework.boot.autoconfigure.internalCachingMetadataReaderFactory
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$Jackson2ObjectMapperBuilderCustomizerConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonMixinConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperBuilderConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$JacksonObjectMapperConfiguration
+org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration$ParameterNamesModuleConfiguration
+org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration
+org.springframework.boot.autoconfigure.ssl.SslAutoConfiguration
+org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration
+org.springframework.boot.autoconfigure.task.TaskSchedulingAutoConfiguration
+org.springframework.boot.autoconfigure.web.client.RestTemplateAutoConfiguration
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration
+org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration$TomcatWebServerFactoryCustomizerConfiguration
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletConfiguration
+org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration
+org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryConfiguration$EmbeddedTomcat
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration
+org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration
+org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration
+org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration
+org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration$TomcatWebSocketConfiguration
+org.springframework.boot.context.internalConfigurationPropertiesBinder
+org.springframework.boot.context.properties.BoundConfigurationProperties
+org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
+org.springframework.boot.context.properties.EnableConfigurationPropertiesRegistrar.methodValidationExcludeFilter
+org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.event.internalEventListenerFactory
+org.springframework.context.event.internalEventListenerProcessor
+parameterNamesModule
+preserveErrorControllerTargetClassPostProcessor
+propertySourcesPlaceholderConfigurer
+requestContextFilter
+requestMappingHandlerAdapter
+requestMappingHandlerMapping
+resourceHandlerMapping
+restTemplateBuilder
+restTemplateBuilderConfigurer
+routerFunctionMapping
+server-org.springframework.boot.autoconfigure.web.ServerProperties
+servletWebServerFactoryCustomizer
+simpleControllerHandlerAdapter
+spring.info-org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+spring.jackson-org.springframework.boot.autoconfigure.jackson.JacksonProperties
+spring.lifecycle-org.springframework.boot.autoconfigure.context.LifecycleProperties
+spring.mvc-org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties
+spring.servlet.multipart-org.springframework.boot.autoconfigure.web.servlet.MultipartProperties
+spring.sql.init-org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties
+spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties
+spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties
+spring.task.scheduling-org.springframework.boot.autoconfigure.task.TaskSchedulingProperties
+spring.web-org.springframework.boot.autoconfigure.web.WebProperties
+sslBundleRegistry
+sslPropertiesSslBundleRegistrar
+standardJacksonObjectMapperBuilderCustomizer
+stringHttpMessageConverter
+taskExecutorBuilder
+taskSchedulerBuilder
+themeResolver
+tomcatServletWebServerFactory
+tomcatServletWebServerFactoryCustomizer
+tomcatWebServerFactoryCustomizer
+viewControllerHandlerMapping
+viewNameTranslator
+viewResolver
+webServerFactoryCustomizerBeanPostProcessor
+websocketServletWebServerCustomizer
+welcomePageHandlerMapping
+welcomePageNotAcceptableHandlerMapping
+```
+
+You can clearly see **org.springframework.boot.autoconfigure** beans. There is also a **tomcatServletWebServerFactory**
+
+Because of the nature of transitive dependencies, if we add the **spring-boot-starter-web** dependency, it will automatically load/include the **spring-boot-starter-tomcat** dependency to the class that includes the **tomcatServletWebServerFactory**, which will give you with a Tomcat servlet container for executing an application.
+
+Open the browser the access the below URL
+
+> http://localhost:8080/
+
+Returns
+
+> Welcome to Spring Boot Course!
+
+OR
+
+Now, in a separate terminal window, launch the service using curl by issuing the following command (along with its output):
+
+>$ curl localhost:8080
+
+Welcome to Spring Boot Course!
+
+## Step5: Verify Actuator Feature
+
+If you're creating a website for an enterprise, you should probably include some management services. With its **actuator** module, Spring Boot supports various such services 
+* Health
+* Audits
+* Beans
+
+This capability may be obtained by including the following **actuator** dependency in **Maven** or **Gradle**.
+
+**For Maven**, please add the following in `pom.xml` file
+
+```xml
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+```
+
+**For Gradle**, please add the following in `build.gradle` file
+
+```text
+implementation 'org.springframework.boot:spring-boot-starter-actuator'
+```
+Then restart the application. A new set of RESTful end points should have been introduced to the application. Spring Boot provides these management functions. The following is an example of typical output:
+
+```text
+management.endpoint.health-org.springframework.boot.actuate.autoconfigure.health.HealthEndpointProperties
+management.endpoints.web-org.springframework.boot.actuate.autoconfigure.endpoint.web.WebEndpointProperties
+management.endpoints.web.cors-org.springframework.boot.actuate.autoconfigure.endpoint.web.CorsEndpointProperties
+management.health.diskspace-org.springframework.boot.actuate.autoconfigure.system.DiskSpaceHealthIndicatorProperties
+management.info-org.springframework.boot.actuate.autoconfigure.info.InfoContributorProperties
+management.metrics-org.springframework.boot.actuate.autoconfigure.metrics.MetricsProperties
+management.observations-org.springframework.boot.actuate.autoconfigure.observation.ObservationProperties
+management.server-org.springframework.boot.actuate.autoconfigure.web.server.ManagementServerProperties
+management.simple.metrics.export-org.springframework.boot.actuate.autoconfigure.metrics.export.simple.SimpleProperties
+```
+
+The actuator exposes the following:
+1. Actuator Health: http://localhost:8080/actuator/health
+2. Actuator: http://localhost:8080/actuator
+
+> Add `management.endpoint.shutdown.enabled=true` to your application.properties file to enable it as an HTTP endpoint, and expose it using management.endpoints.web.exposure.include=health,info,shutdown. However, for a publicly accessible application, you should generally not activate the shutdown endpoint.
+
+For more details, please go through the [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/2.5.0/reference/htmlsingle/#actuator.endpoints)
+
