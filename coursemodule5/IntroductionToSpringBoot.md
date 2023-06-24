@@ -12,7 +12,7 @@ Spring Boot employs appropriate defaults and configures the application automati
 
 ### 2. Standalone Applications
 
-Spring Boot enables you to construct independent programmes that can be executed using the java -jar command. It comes with an inbuilt servlet container, such as Tomcat or Jetty, which eliminates the need for complicated deployment configurations.
+Spring Boot enables you to construct independent programs that can be executed using the java -jar command. It comes with an inbuilt servlet container, such as Tomcat or Jetty, which eliminates the need for complicated deployment configurations.
 
 ### 3. Spring Boot Starters
 

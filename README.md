@@ -27,8 +27,6 @@
 * [Introduction to Spring MVC](./coursemodule3/IntroductionToSpringMVC.md)
 * [Spring MVC Terminology](./coursemodule3/SpringMVCTerminology.md)
 * [Configuration of Spring MVC](./coursemodule3/ConfigureSpringMVC.md)
-* Form handling and validation
-* File uploads
 
 ## Course Module 4: WebServices
 * [REST](./coursemodule4/RESTArchitecture.md)
@@ -38,6 +36,7 @@
 * [Introduction to Spring Boot & features](./coursemodule5/IntroductionToSpringBoot.md)
 * [Advantages of using Spring Boot](./coursemodule5/AdvantagesOfSpringBoot.md)
 * [Spring Boot Starters](./coursemodule5/SpringBootStarters.md)
+* [Spring Boot Annotations](./coursemodule5/SpringBootAnnotations.md)
 * [Building An Application with Spring Boot](./coursemodule5/BuildingApplicationWithSpringBoot.md)
 * Building a RESTful Web Service (CRUD Operations)
 
