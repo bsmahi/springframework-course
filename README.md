@@ -38,7 +38,7 @@
 * [Spring Boot Starters](./coursemodule5/SpringBootStarters.md)
 * [Spring Boot Annotations](./coursemodule5/SpringBootAnnotations.md)
 * [Building An Application with Spring Boot](./coursemodule5/BuildingApplicationWithSpringBoot.md)
-* Building a RESTful Web Service (CRUD Operations)
+* [Building a RESTful Web Service (CRUD Operations)](./coursemodule5/BuildRestfulWebServiceInSpringBoot.md)
 
 
 ## Course Module 6: Spring Data
