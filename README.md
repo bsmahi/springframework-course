@@ -42,7 +42,7 @@
 
 
 ## Course Module 6: Spring Data
-* Introduction to Spring Data
+* [Introduction to Spring Data](./coursemodule6/IntroductionToSpringData.md)
 * Overview of Data Access Object (DAO) pattern
 * Spring Data JPA
 * Spring Data JDBC
