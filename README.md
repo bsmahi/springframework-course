@@ -43,9 +43,9 @@
 
 ## Course Module 6: Spring Data
 * [Introduction to Spring Data](./coursemodule6/IntroductionToSpringData.md)
-* Overview of Data Access Object (DAO) pattern
-* Spring Data JPA
-* Spring Data JDBC
+* [Overview of Data Access Object (DAO) pattern](./coursemodule6/DataAccessObjectPattern.md)
+* [Spring Data JDBC](./coursemodule6/SpringJDBC.md)
+* [Build Spring Data Jpa Sample Application](./coursemodule6/BuildSpringDataJpaApp.md)
 * Spring Data with different DB (H2, Mysql, and MongoDB)
 
 ## Course Module 7: Spring Security
