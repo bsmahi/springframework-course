@@ -49,7 +49,7 @@
 * [Spring Data with different DB (H2)](./coursemodule6/SpringDataJpaWithH2.md)
 
 ## Course Module 7: Spring Security
-* Introduction to Spring Security
+* [Introduction to Spring Security](./coursemodule7/IntroductionToSpringSecurity.md)
 * Authentication and authorization
 * User management and authentication providers
 * Security configurations
