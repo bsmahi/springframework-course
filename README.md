@@ -50,7 +50,7 @@
 
 ## Course Module 7: Spring Security
 * [Introduction to Spring Security](./coursemodule7/IntroductionToSpringSecurity.md)
-* Authentication and authorization
+* [Authentication and authorization](./coursemodule7/SpringSecurityAuthentication.md)
 * User management and authentication providers
 * Security configurations
 
