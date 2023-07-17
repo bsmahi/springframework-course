@@ -51,7 +51,7 @@
 ## Course Module 7: Spring Security
 * [Introduction to Spring Security](./coursemodule7/IntroductionToSpringSecurity.md)
 * [Authentication and authorization](./coursemodule7/SpringSecurityAuthentication.md)
-* User management and authentication providers
+* [User management and authentication providers](./coursemodule7/UserManagementAndAuthenticationProvdier.md)
 * Security configurations
 
 ## Course Module 8: Testing with Spring Framework
