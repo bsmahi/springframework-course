@@ -52,10 +52,9 @@
 * [Introduction to Spring Security](./coursemodule7/IntroductionToSpringSecurity.md)
 * [Authentication and authorization](./coursemodule7/SpringSecurityAuthentication.md)
 * [User management and authentication providers](./coursemodule7/UserManagementAndAuthenticationProvdier.md)
-* Security configurations
 
 ## Course Module 8: Testing with Spring Framework
-* Unit testing with JUnit
+* [Unit testing with JUnit](./coursemodule8/UnitTestingWithJunit.md)
 * Integration testing with Spring Test
 * Mocking with Mockito
 
