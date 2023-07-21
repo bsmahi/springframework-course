@@ -55,8 +55,8 @@
 
 ## Course Module 8: Testing with Spring Framework
 * [Unit testing with JUnit](./coursemodule8/UnitTestingWithJunit.md)
+* [Unit Testing Rest API using JUnit 5 & Mockito](./coursemodule8/UnitTestingRestAPIUsingJUnit5.md)
 * Integration testing with Spring Test
-* Mocking with Mockito
 
 ## Course Module 9: Source Code & Troubleshooting Guide
 * Complete Source Code
