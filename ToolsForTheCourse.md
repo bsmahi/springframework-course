@@ -39,4 +39,4 @@
 
 ## This course's ground rules
 
-Each module is conceptually taught first, followed by code examples, quizzes, and labs concerning the topic being covered.
+Each module is conceptually taught first, followed by code examples concerning the topic being covered.
