@@ -60,6 +60,8 @@
 
 ## Course Module 9: Source Code & Troubleshooting Guide
 * Complete Source Code
+   * For [Spring Core & MVC](./learn-spring)
+   * For [Spring Boot & REST & Testing](https://github.com/bsmahi/learn-spring-boot/tree/master) 
 * Troubleshooting Guide
 
 Happy Coding and Learning
