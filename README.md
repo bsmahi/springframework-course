@@ -64,7 +64,7 @@
    * For [Spring Boot & REST & Testing](https://github.com/bsmahi/learn-spring-boot/tree/master) 
 * Troubleshooting Guide
 
-Practice Projects 
+## Practice Projects 
 1. [Spring Boot CRUD Application with H2](https://github.com/bsmahi/spring-boot-app-with-h2)
 2. [Spring Boot CRUD Application with MySQL, JPA, Hibernate](https://github.com/bsmahi/spring-boot-app-with-mysql)
 3. [Spring Boot CRUD Application with PostgresSql, JPA, Hibernate](https://github.com/bsmahi/spring-boot-app-with-postgres)
