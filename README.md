@@ -69,5 +69,6 @@
 2. [Spring Boot CRUD Application with MySQL, JPA, Hibernate](https://github.com/bsmahi/spring-boot-app-with-mysql)
 3. [Spring Boot CRUD Application with PostgresSql, JPA, Hibernate](https://github.com/bsmahi/spring-boot-app-with-postgres)
 4. [Frontend Application with Angular](https://github.com/bsmahi/course-app)
+5. [Spring Boot CRUD Application with MongoDB, JPA, Hibernate](https://github.com/bsmahi/spring-boot-app-with-mongodb)
 
 Happy Coding and Learning
