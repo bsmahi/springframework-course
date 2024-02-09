@@ -3,16 +3,16 @@
 [![Java](https://skillicons.dev/icons?i=java,&theme=light)](https://skillicons.dev)
 ### 1. Installing Java
 
-- Windows - https://www.youtube.com/watch?v=I0SBRWVS0ok
-- Linux - https://www.youtube.com/watch?v=mHvFpyHK97A
-- Mac - https://www.youtube.com/watch?v=U3kTdMPlgsY
+- Windows - [https://www.youtube.com/watch?v=I0SBRWVS0ok](https://www.youtube.com/watch?v=IJ-PJbvJBGs)
+- Linux - [https://www.youtube.com/watch?v=mHvFpyHK97A](https://www.youtube.com/watch?v=Mlmm7XvB_2k)
+- Mac - [https://www.youtube.com/watch?v=U3kTdMPlgsY](https://www.youtube.com/watch?v=pxi3iIy4F5A)
 
 [![Eclipse](https://skillicons.dev/icons?i=eclipse,&theme=light)](https://skillicons.dev)
 
 ### 2. Installing Eclipse
 
-- Windows - https://www.youtube.com/watch?v=toY06tsME-M
-- Others - https://www.youtube.com/watch?v=XveQ9Gq41UM
+- Windows - [https://www.youtube.com/watch?v=toY06tsME-M](https://www.youtube.com/watch?v=OBuOEYjj9kc)
+- Others - [https://www.youtube.com/watch?v=XveQ9Gq41UM](https://www.youtube.com/watch?v=Bhgnz6aZg1Y)
 - https://www3.ntu.edu.sg/home/ehchua/programming/howto/eclipsejava_howto.html
 
 [![IntelliJ](https://skillicons.dev/icons?i=idea,&theme=light)](https://skillicons.dev)
