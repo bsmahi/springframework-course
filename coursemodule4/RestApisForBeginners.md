@@ -37,9 +37,11 @@ The server does not store any state about the client session between requests.
 Let's say you're building a blog application with a RESTful API. You might have resources like posts, comments, and users. Each resource would have its own URI, and you would use HTTP methods to perform operations on those resources. For example:
 
 > [!IMPORTANT]
+
 - GET /posts: Retrieve a list of all blog posts
 - POST /posts: Create a new blog post
 - GET /posts/{id}: Retrieve a specific blog post by its ID
 - PUT /posts/{id}: Update an existing blog post
 - DELETE /posts/{id}: Delete a blog post
+  
 By following these principles, you can design and implement RESTful APIs that are easy to understand, use, and maintain.
