@@ -24,3 +24,22 @@ Each resource is distinguished by a distinct **URI (Uniform Resource Identifier)
 **PUT:** Update an existing resource
 
 **DELETE:** Delete a resource
+
+**Uniform Interface:** RESTful APIs provide a standardized interface, ensuring that developers can easily comprehend and utilize the API. 
+This uniformity is achieved by employing a consistent **set of HTTP methods and URI patterns across all resources**, simplifying the development process.
+
+**Statelessness:** RESTful APIs are stateless, meaning that each request from a client to the server must contain all the information necessary to understand the request. 
+The server does not store any state about the client session between requests.
+
+**Representation:** Resources in a RESTful API are represented in a standard format, such as JSON or XML. Clients can request different representations of a resource using content negotiation.
+
+**Example:**
+Let's say you're building a blog application with a RESTful API. You might have resources like posts, comments, and users. Each resource would have its own URI, and you would use HTTP methods to perform operations on those resources. For example:
+
+> [!IMPORTANT]
+- GET /posts: Retrieve a list of all blog posts
+- POST /posts: Create a new blog post
+- GET /posts/{id}: Retrieve a specific blog post by its ID
+- PUT /posts/{id}: Update an existing blog post
+- DELETE /posts/{id}: Delete a blog post
+By following these principles, you can design and implement RESTful APIs that are easy to understand, use, and maintain.
