@@ -1,5 +1,3 @@
-![RESTFul API](https://www.shutterstock.com/image-vector/rest-api-concept-modern-big-text-1818087782)
-
 # What is an API?
 An API, short for Application Programming Interface, serves as a framework of regulations and standards enabling various software applications to interact with one another.
 APIs establish the procedures and data structures that applications can employ to solicit and share data.
