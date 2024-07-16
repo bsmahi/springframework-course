@@ -36,6 +36,8 @@
 ### 5. Install Git:
 - https://github.com/git-guides/install-git
 
+### 6. Keycloak
+
 
 ## This course's ground rules
 
